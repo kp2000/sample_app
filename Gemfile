@@ -12,6 +12,8 @@ group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '0.5.5'
+  gem 'execjs'
+  gem 'therubyracer'
 end
 
 gem 'annotate', '2.5.0', group: :development
@@ -26,6 +28,12 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
+
+  # System-dependent gems (Linux)
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
+
+
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
